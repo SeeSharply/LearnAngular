@@ -1,0 +1,13 @@
+<div class="articledetail" *ngIf="blog"> 
+    <h2>文章明细</h2>
+    <div class="content">
+        <div class="row">
+            <span >ID</span>
+            <span>{{blog.id}}</span>
+            </div>
+        <div class="row">
+            <span >Title</span>
+            <input type="text" class="myInput"  [(ngModel)]="blog.title"/>
+        </div>
+    </div>
+</div>
