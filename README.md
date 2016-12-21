@@ -2,8 +2,6 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
-
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -18,11 +16,15 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ## how  to run?
+
 cammand line.  
- `npm install`.
- `ng ngserve`.
- then visir localhost:4200 in broswer.
+
+`npm install`.
+
+`ng ngserve`.
+
+then visir localhost:4200 in broswer.
  
- ## Build
+## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
