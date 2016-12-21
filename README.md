@@ -21,7 +21,7 @@ cammand line.
 
 `npm install`.
 
-`ng ngserve`.
+`ng serve`.
 
 then visir localhost:4200 in broswer.
  
