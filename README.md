@@ -18,10 +18,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ## how  to run?
-cammand line  
- `npm install`
- `ng ngserve`
- then visir localhost:4200 in broswer
+cammand line.  
+ `npm install`.
+ `ng ngserve`.
+ then visir localhost:4200 in broswer.
  
  ## Build
 
