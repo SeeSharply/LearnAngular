@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
 import {BLOGS,Blog} from '../data/blog';
+import {BlogService} from './../data/blog.service';
 
 @Component({
 	selector: 'ngarticle',
 	templateUrl: './article.component.html',
-	styleUrls:['./article.component.css']
+	styleUrls:['./article.component.css'],
+	providers:[BlogService]
 })
 
 export class ArticleComponent  {
 	blogList:Blog[];
 	selectedBlog:Blog;
-	constructor()
+	constructor(private bService:BlogService)
 	{
-		this.blogList=BLOGS;
+		this.blogList=bService.getBlogs();
 	}
-	selectBlog(blog:Blog)
+	selectBlog(id:number)
 	{
-		this.selectedBlog=blog;
+		this.selectedBlog=this.bService.getSelectedBlog(id);
 	}
 }
