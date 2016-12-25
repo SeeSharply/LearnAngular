@@ -5,8 +5,7 @@ import {BlogService} from './../data/blog.service';
 @Component({
 	selector: 'ngarticle',
 	templateUrl: './article.component.html',
-	styleUrls:['./article.component.css'],
-	providers:[BlogService]
+	styleUrls:['./article.component.css']
 })
 
 export class ArticleComponent  {

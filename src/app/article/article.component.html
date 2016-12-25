@@ -1,13 +1,10 @@
 <div class="article">
     <ul class="articleList">
-            <li *ngFor="let blog of blogList" (click)="selectBlog(blog.id)">
+            <li *ngFor="let blog of blogList" [routerLink]="['/articledetail',blog.id]" >
                 <a>
                    {{blog.id}}:{{blog.title}}
                 </a>
             </li>
     </ul>
     <div>
-    <article-detail  [blog]="selectedBlog"></article-detail>
-        
-    </div>
 </div>
