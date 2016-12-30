@@ -1,7 +1,7 @@
 import { Component, OnInit,Input ,HostBinding,
          trigger, transition, animate,
          style, state } from '@angular/core';
-import {ActivatedRoute,Params} from '@angular/router';
+import {ActivatedRoute,Params,Router} from '@angular/router';
 import { Location }     from '@angular/common';
 import {BLOGS,Blog} from '../data/blog';
 import {BlogService} from '../data/blog.service'
@@ -53,15 +53,20 @@ export class ArticledetailComponent implements OnInit {
 	@Input() blog:Blog;
 	constructor(
 	  private bService: BlogService,
-	  private route: ActivatedRoute,
+	  private aRoute: ActivatedRoute,
+	  private router: Router,
 	  private location: Location
 	) {}
 
 	ngOnInit() {
-		let id=this.route.params
+		let id=this.aRoute.params
 		.switchMap((params: Params) => params['id'])
 		.subscribe(x=>this.blog=this.bService.getSelectedBlog(+x))
 	 }
+   doEdit()
+   {
+      this.router.navigate(["articleedit",{blogparam:JSON.stringify(this.blog)}],{relativeTo:this.aRoute})
+   }
 	 back()
 	 {
 		 this.location.back();

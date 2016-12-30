@@ -7,10 +7,17 @@
             </div>
         <div class="row">
             <span >Title</span>
-            <input type="text" class="myInput"  [(ngModel)]="blog.title"/>
+            <span>{{blog.title}}</span>
+        </div>
+         <div class="row">
+            <span >profile</span>
+            <span>{{blog.profile}}</span>
         </div>
         <div class="row">
             <button class="btn" (click)="back()">返回列表</button>
+            <button class="btn" (click)="doEdit()">编辑</button>
+            <button class="btn" (click)="doAdd()">新增</button>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>
