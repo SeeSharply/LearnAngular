@@ -6,11 +6,12 @@ import { AppRoutingModule } from './app.routing';
 import { ArticleDetailRoutingModule } from './articledetail.routing';
 
 import {BlogService} from './data/blog.service';
+import {CommentService} from './data/comment.service';
 
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticledetailComponent } from './articledetail/articledetail.component';
-import { ArticleEditComponent } from './articleedit/articleedit.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { ArticleEditComponent } from './articleedit/articleedit.component';
     AppComponent,
     ArticleComponent,
     ArticledetailComponent,
-    ArticleEditComponent
+    CommentComponent
     
   ],
   imports: [
@@ -29,7 +30,7 @@ import { ArticleEditComponent } from './articleedit/articleedit.component';
     AppRoutingModule
 
   ],
-  providers: [BlogService],
+  providers: [BlogService,CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

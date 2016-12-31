@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Blog: {{BlogTitle}}</h2>
+<div class="comment">
+    <div class="section">
+        <div *ngFor="let com of comments">
+            <div>
+                <span>名字：</span>
+                <span>{{com.userName}}</span>
+            </div>
+            <div >
+                <span>评论内容：</span>
+                <span>{{com.content}}</span>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+</div>
+<div class="divider red"></div>
+<div>
+    <div class="section">
+        <div class="">
+        来，评论一下
+        </div>
+        <div>
+            <input type="text" placeholder="你的名字" [(ngModel)]="com.userName" class="">
+            <input type="text" placeholder="说点儿什么" [(ngModel)]="com.content" class="">
+        </div>
+        <div>
+            <button class="btn" (click)="sumComment()">提交</button>
+        </div>
+    </div>
+</div>
+</div>

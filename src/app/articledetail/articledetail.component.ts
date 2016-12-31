@@ -63,9 +63,9 @@ export class ArticledetailComponent implements OnInit {
 		.switchMap((params: Params) => params['id'])
 		.subscribe(x=>this.blog=this.bService.getSelectedBlog(+x))
 	 }
-   doEdit()
+   doComment()
    {
-      this.router.navigate(["articleedit",{blogparam:JSON.stringify(this.blog)}],{relativeTo:this.aRoute})
+      this.router.navigate(["comment",{id:this.blog.id,title:this.blog.title}],{relativeTo:this.aRoute})
    }
 	 back()
 	 {

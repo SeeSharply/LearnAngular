@@ -1,7 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ArticleEditComponent }   from './articleedit/articleedit.component';
+import { CommentComponent }   from './comment/comment.component';
 import { ArticledetailComponent }   from './articledetail/articledetail.component';
 
 const articleDetailRoutes: Routes = [
@@ -10,8 +10,8 @@ const articleDetailRoutes: Routes = [
     component: ArticledetailComponent,
     children: [
       {
-        path: 'articleedit',
-        component: ArticleEditComponent
+        path: 'comment',
+        component: CommentComponent
       }
     ]
   }
