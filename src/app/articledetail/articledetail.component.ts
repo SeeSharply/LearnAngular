@@ -26,10 +26,10 @@ import 'rxjs/add/operator/switchMap';
           opacity: 0,
           transform: 'translateY(-100%)'
         }),
-        animate('0.2s ease-in')
+        animate('0.6s ease-in')
       ]),
       transition(':leave', [
-        animate('.5s ease-out', style({
+        animate('.3s ease-out', style({
           opacity: 0,
           transform: 'translateY(100%)'
         }))
@@ -60,13 +60,14 @@ export class ArticledetailComponent implements OnInit {
 
 	ngOnInit() {
 		let id=this.aRoute.params
-		.switchMap((params: Params) => params['id'])
-		.subscribe(x=>this.blog=this.bService.getSelectedBlog(+x))
+		.switchMap((params: Params) =>this.bService.getSelectedBlog(+params['id']))
+		.subscribe(x=>this.blog=x)
 	 }
    doComment()
    {
       this.router.navigate(["comment",{id:this.blog.id,title:this.blog.title}],{relativeTo:this.aRoute})
    }
+ 
 	 back()
 	 {
 		 this.location.back();

@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routing';
 import { ArticleDetailRoutingModule } from './articledetail.routing';
+//in memery
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './data/in-memery-data.service'
 
 import {BlogService} from './data/blog.service';
 import {CommentService} from './data/comment.service';
@@ -26,7 +29,8 @@ import { CommentComponent } from './comment/comment.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ArticleDetailRoutingModule,  
+    ArticleDetailRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),//in memery
     AppRoutingModule
 
   ],
